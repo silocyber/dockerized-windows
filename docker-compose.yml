@@ -2,9 +2,12 @@ version: "3"
 services:
   windows:
     image: dockurr/windows
-    container_name: windows
+    container_name: windows-dockerized
     environment:
       VERSION: "win11"
+      RAM_SIZE: "10G"
+      CPU_CORES: "6"
+      DISK_SIZE: "128G"
     devices:
       - /dev/kvm
     cap_add:
